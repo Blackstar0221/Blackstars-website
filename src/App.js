@@ -10,7 +10,7 @@ function App() {
       }}
     >
       <h1 style={{ fontFamily: '"Comic Sans MS", fantasy', color: '#4b9be1' }}>
-        {"zen's website"}
+        {"Blackstar's website"}
       </h1>
       <h2
         style={{
