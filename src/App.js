@@ -9,9 +9,15 @@ function App() {
         alignItems: 'center'
       }}
     >
-      <h1 style={{ fontFamily: '"Comic Sans MS", fantasy', color: '#4b9be1' }}>
+      <h1
+        style={{
+          fontFamily: '"Comic Sans MS", fantasy',
+          color: '#4b9be1'
+        }}
+      >
         {"마주니의 웹사이트"}
       </h1>
+
       <h2
         style={{
           fontFamily: 'Arial, Helvetica, cursive',
@@ -21,6 +27,7 @@ function App() {
       >
         click the buttons below
       </h2>
+
       <button
         style={{
           fontFamily: 'monospace',
@@ -33,6 +40,7 @@ function App() {
       >
         Welcome
       </button>
+
       <button
         style={{
           fontFamily: 'monospace',
@@ -43,9 +51,9 @@ function App() {
           marginTop: '2rem'
         }}
         onClick={() => {
-          const name = prompt("이름이 뭐야?");
+          const name = prompt('이름이 뭐야?');
           if (name) {
-            alert('만나서 반가워, 외소행성 B7-3A에서 온 ' + name + 외계인'!');
+            alert('만나서 반가워, 외소행성 B7-3A에서 온 ' + name + ' 외계인!');
           } else {
             alert('만나서 반가워, 이름없는 외계인');
           }
