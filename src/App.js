@@ -10,7 +10,7 @@ function App() {
       }}
     >
       <h1 style={{ fontFamily: '"Comic Sans MS", fantasy', color: '#4b9be1' }}>
-        {"Blackstar's website"}
+        {"마주니의 웹사이트"}
       </h1>
       <h2
         style={{
@@ -29,7 +29,7 @@ function App() {
           background: 'blue',
           color: 'white'
         }}
-        onClick={() => alert('Hello there')}
+        onClick={() => alert('안녕')}
       >
         Welcome
       </button>
@@ -43,15 +43,15 @@ function App() {
           marginTop: '2rem'
         }}
         onClick={() => {
-          const name = prompt("What's your name?");
+          const name = prompt("이름이 뭐야?");
           if (name) {
-            alert('Nice to meet you, ' + name + '!');
+            alert('만나서 반가워, 외소행성 B7-3A에서 ' + name + 외계인'!');
           } else {
-            alert('Nice to meet you, stranger');
+            alert('만나서 반가워, 이름없는 외계인');
           }
         }}
       >
-        {"What's your name?"}
+        {"이름이 뭐야?"}
       </button>
     </div>
   );
