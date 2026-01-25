@@ -45,13 +45,13 @@ function App() {
         onClick={() => {
           const name = prompt("이름이 뭐야?");
           if (name) {
-            alert('만나서 반가워, 외소행성 B7-3A에서 ' + name + 외계인'!');
+            alert('만나서 반가워, 외소행성 B7-3A에서 온 ' + name + 외계인'!');
           } else {
             alert('만나서 반가워, 이름없는 외계인');
           }
         }}
       >
-        {"이름이 뭐야?"}
+        {"What's your name?"}
       </button>
     </div>
   );
