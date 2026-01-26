@@ -53,7 +53,7 @@ function App() {
         onClick={() => {
           const name = prompt('이름이 뭐야?');
           if (name) {
-            alert('만나서 반가워, 외소행성 B7-3A에서 온 ' + name + ' 외계인!');
+            alert('만나서 반가워, 외소행성 B7-3A에서 온 ' + name + ' 외계인 이름이 참 외계인 답구나! (칭찬이야~~)');
           } else {
             alert('만나서 반가워, 이름없는 외계인');
           }
