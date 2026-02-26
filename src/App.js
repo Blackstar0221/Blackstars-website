@@ -1,3 +1,30 @@
+// Umami tracking (conditional)
+(function () {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const noTrack = params.get('no-track');
+
+    if (noTrack === '1') {
+      // Don't load Umami for ?no-track=1
+      console.log('Umami tracking disabled for this visit');
+      return;
+    }
+
+    // Load Umami script
+    const script = document.createElement('script');
+    script.async = true;
+    script.defer = true;
+    script.setAttribute(
+      'data-website-id',
+      'bd368490-8904-41df-acdd-f084ecedad86'
+    );
+    script.src = 'https://cloud.umami.is/script.js';
+    document.head.appendChild(script);
+  } catch (e) {
+    console.error('Umami load error', e);
+  }
+})();
+
 function App() {
   return (
     <div
@@ -15,7 +42,7 @@ function App() {
           color: '#4b9be1'
         }}
       >
-        {"마주니의 웹사이트"}
+        {'마주니의 웹사이트'}
       </h1>
 
       <h2
@@ -53,9 +80,15 @@ function App() {
         onClick={() => {
           const name = prompt('이름이 뭐야?');
           if (name) {
-            alert('만나서 반가워, 외소행성 B7-3A에서 온 ' + name + ' 외계인 이름이 참 외계인 답구나! (칭찬이야~~)');
+            alert(
+              '만나서 반가워, 외소행성 B7-3A에서 온 ' +
+                name +
+                ' 외계인 이름이 참 외계인 답구나! (칭찬이야~~)'
+            );
           } else {
-            alert('만나서 반가워, 이름없는 외계인! 이름이 네글자구나!');
+            alert(
+              '만나서 반가워, 이름없는 외계인! 이름이 네글자구나!'
+            );
           }
         }}
       >
