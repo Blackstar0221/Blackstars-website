@@ -1,30 +1,3 @@
-// Umami tracking (conditional)
-(function () {
-  try {
-    const params = new URLSearchParams(window.location.search);
-    const noTrack = params.get('no-track');
-
-    if (noTrack === '1') {
-      // Don't load Umami for ?no-track=1
-      console.log('Umami tracking disabled for this visit');
-      return;
-    }
-
-    // Load Umami script
-    const script = document.createElement('script');
-    script.async = true;
-    script.defer = true;
-    script.setAttribute(
-      'data-website-id',
-      'bd368490-8904-41df-acdd-f084ecedad86'
-    );
-    script.src = 'https://cloud.umami.is/script.js';
-    document.head.appendChild(script);
-  } catch (e) {
-    console.error('Umami load error', e);
-  }
-})();
-
 function App() {
   return (
     <div
